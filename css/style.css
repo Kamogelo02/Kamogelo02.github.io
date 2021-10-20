@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root{
-    --yellow:#f9ca24;
+    --turquoise:#40E0D0;
 }
 
 *{
@@ -15,7 +15,7 @@
 }
 
 *::selection{
-    background:var(--yellow);
+    background:var(--turquoise);
     color:#333;
 }
 
@@ -33,7 +33,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+    background:var(--turquoise);
 }
 
 body{
@@ -46,6 +46,32 @@ section{
     min-height: 100vh;
     padding:1rem;
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: var(--turquoise);
+}
+
+
+a:active {
+  background: var(--turquoise);
+  color: #fff;
+}
+
 
 .btn{
     padding:.7rem 3rem;
@@ -63,7 +89,7 @@ section{
 }
 
 .btn:hover{
-    background:var(--yellow);
+    background:var(--turquoise);
 }
 
 .heading{
@@ -76,7 +102,7 @@ section{
 }
 
 .heading span{
-    color:var(--yellow);
+    color:var(--turquoise);
 }
 
 header{
@@ -99,7 +125,7 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid var(--yellow);
+    border:.7rem solid var(--turquoise);
 }
 
 header .user .name{
@@ -133,7 +159,7 @@ header .navbar ul li a{
 }
 
 header .navbar ul li a:hover{
-    background:var(--yellow);
+    background:var(--turquoise);
 }
 
 #menu{
@@ -166,7 +192,7 @@ header .navbar ul li a:hover{
 }
 
 .home h1 span{
-    color:var(--yellow);
+    color:var(--turquoise);
 }
 
 .home p{
@@ -191,7 +217,7 @@ header .navbar ul li a:hover{
 
 .about .row .info h3{
     font-size: 2rem;
-    color:var(--yellow);
+    color:var(--turquoise);
     padding:1rem 0;
     font-weight: normal;
 }
@@ -218,7 +244,7 @@ header .navbar ul li a:hover{
 
 .about .row .counter .box span{
     font-size: 4rem;
-    color:var(--yellow);
+    color:var(--turquoise);
 }
 
 .about .row .counter .box h3{
@@ -273,4 +299,173 @@ header .navbar ul li a:hover{
     text-align: center;
     font-size: 2rem;
     color:#fff;
-    background:var(--yellow);
+    background:var(--turquoise);
+}
+
+.skills .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.skills .box-container .box{
+    height: 13rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.skills .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.skills .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background:#3333;
+    color:#fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color:var(--turquoise);
+}
+
+.top{
+    position: fixed;
+    bottom:7.5rem; right: 2rem;
+    z-index: 100;
+    display: none;
+}
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+ 
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .skills .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
