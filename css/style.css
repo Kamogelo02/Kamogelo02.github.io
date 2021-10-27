@@ -119,11 +119,11 @@ header{
 }
 
 header .user img{
-    height:16.5rem;
-    width:16.5rem;
+    height:16rem;
+    width:16rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border:.7rem solid var(--turquoise);
 }
 
