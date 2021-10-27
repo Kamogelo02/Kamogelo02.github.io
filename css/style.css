@@ -124,7 +124,7 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: -2rem;
-    border:.6rem solid var(--turquoise);
+    border:.7rem solid var(--turquoise);
 }
 
 header .user .name{
